@@ -8,7 +8,7 @@ metadata:
 spec:
   ingressClassName: public
   rules:
-    - host: argocd.local
+    - host: argocd.kostjaz.ru
       http:
         paths:
           - path: /

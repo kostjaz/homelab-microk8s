@@ -1,0 +1,12 @@
+# local kube access
+.kube/
+.envrc
+
+# macOS
+.DS_Store
+
+# VS Code
+.vscode/
+
+# misc
+*.log

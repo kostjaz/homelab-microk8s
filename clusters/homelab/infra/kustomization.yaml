@@ -3,7 +3,6 @@ kind: Kustomization
 
 resources:
   - argocd-config.yaml
-  - argocd-ingress.yaml
   - argocd-traefik.yaml
   - traefik-namespace.yaml
   - traefik.yaml

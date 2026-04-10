@@ -1,17 +1,19 @@
 apiVersion: argoproj.io/v1alpha1
 kind: Application
 metadata:
-  name: homelab-root
+  name: homelab-apps
   namespace: argocd
   finalizers:
     - resources-finalizer.argocd.argoproj.io
+  annotations:
+    argocd.argoproj.io/sync-wave: "1"
 spec:
   project: default
 
   source:
     repoURL: https://github.com/kostjaz/homelab-microk8s
     targetRevision: main
-    path: clusters/homelab/argocd
+    path: clusters/homelab/apps
 
   destination:
     server: https://kubernetes.default.svc

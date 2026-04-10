@@ -6,4 +6,4 @@ resources:
   - argocd-traefik.yaml
   - traefik-namespace.yaml
   - traefik.yaml
-
+  - monitoring.yaml

@@ -1,0 +1,14 @@
+apiVersion: traefik.containo.us/v1alpha1
+kind: IngressRoute
+metadata:
+  name: homepage
+  namespace: homepage
+spec:
+  entryPoints:
+    - web
+  routes:
+    - match: Host(`kostjaz.ru`)
+      kind: Rule
+      services:
+        - name: homepage
+          port: 80

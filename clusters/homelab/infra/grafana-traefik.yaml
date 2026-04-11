@@ -1,0 +1,14 @@
+apiVersion: traefik.containo.us/v1alpha1
+kind: IngressRoute
+metadata:
+  name: grafana-traefik
+  namespace: monitoring
+spec:
+  entryPoints:
+    - web
+  routes:
+    - match: Host(`grafana.kostjaz.ru`)
+      kind: Rule
+      services:
+        - name: monitoring-grafana
+          port: 80

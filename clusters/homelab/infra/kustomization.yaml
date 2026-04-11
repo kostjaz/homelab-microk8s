@@ -4,6 +4,7 @@ kind: Kustomization
 resources:
   - argocd-config.yaml
   - argocd-traefik.yaml
+  - grafana-traefik.yaml
   - traefik-namespace.yaml
   - traefik.yaml
   - monitoring.yaml

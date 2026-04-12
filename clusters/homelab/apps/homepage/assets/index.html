@@ -1,0 +1,36 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <title>HomeLab 0.1</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
+    <link rel="stylesheet" href="/termynal.css" />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css?family=Fira+Mono"
+    />
+    <style>
+      body {
+        padding: 0;
+        margin: 0;
+        background: #1a1e24;
+        width: 100%;
+        min-height: 100vh;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        -webkit-font-smoothing: antialiased;
+        -moz-osx-font-smoothing: grayscale;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="termynal" data-termynal>
+      <span data-ty="input" data-ty-prompt="~">./hello.sh</span>
+      <span data-ty>Hello World!</span>
+    </div>
+
+    <script src="/termynal.js" data-termynal-container="#termynal"></script>
+  </body>
+</html>

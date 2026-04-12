@@ -3,7 +3,18 @@ kind: Kustomization
 
 resources:
   - namespace.yaml
-  - configmap.yaml
   - deployment.yaml
   - service.yaml
   - ingressroute.yaml
+
+generatorOptions:
+  disableNameSuffixHash: true
+
+configMapGenerator:
+  - name: homepage
+    namespace: homepage
+    files:
+      - assets/index.html
+      - assets/termynal.css
+      - assets/termynal.js
+      - assets/favicon.svg

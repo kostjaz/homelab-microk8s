@@ -25,6 +25,16 @@ spec:
           websecure:
             nodePort: 32443
 
+        metrics:
+          prometheus:
+            addEntryPointsLabels: true
+            addRoutersLabels: true
+            addServicesLabels: true
+            service:
+              enabled: true
+            serviceMonitor:
+              interval: 30s
+
   destination:
     server: https://kubernetes.default.svc
     namespace: traefik

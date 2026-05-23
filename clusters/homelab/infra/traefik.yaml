@@ -13,11 +13,12 @@ spec:
   source:
     repoURL: https://traefik.github.io/charts
     chart: traefik
-    targetRevision: 27.0.0
+    targetRevision: 40.2.0
     helm:
       values: |
         service:
-          type: NodePort
+          spec:
+            type: NodePort
 
         ports:
           web:
@@ -32,7 +33,9 @@ spec:
             addServicesLabels: true
             service:
               enabled: true
+            disableAPICheck: true
             serviceMonitor:
+              enabled: true
               interval: 30s
 
   destination:
